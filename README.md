@@ -27,5 +27,5 @@ Technologies Used
 - **Libraries:** Flask, Jinja2
 
 
-## **Folder Structure**
+
 
