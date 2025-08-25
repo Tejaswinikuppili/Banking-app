@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h2>Your Transactions</h2>
+    <table border="1" cellpadding="6" cellspacing="0">
+        <tr>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Target User</th>
+        </tr>
+        {% for t in transactions %}
+        <tr>
+            <td>{{ t.type }}</td>
+            <td>{{ "%.2f"|format(t.amount) }}</td>
+            <td>{{ t.target_user or "-" }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><a href="/dashboard">Back to Dashboard</a></p>
+</body>
+</html>

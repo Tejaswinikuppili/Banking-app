@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome - UCO BANK</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>UCO BANK</header>
+
+<nav>
+    <a href="{{ url_for('register') }}">Register</a>
+    <a href="{{ url_for('login') }}">Login</a>
+</nav>
+
+<div class="welcome-container">
+    <h1>Welcome to UCO BANK</h1>
+    <p>Your trusted banking partner</p>
+    <div class="action-buttons">
+        <a href="{{ url_for('register') }}"><button>Get Started</button></a>
+        <a href="{{ url_for('login') }}"><button>Login</button></a>
+    </div>
+</div>
+
+<footer>
+    Call us: 9876543210 | UCOBANK.com
+</footer>
+
+</body>
+</html>
+
